@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Flexíveis</title>
+</head>
+<body>
+    <h1>Testando Imagens</h1>
+    <picture>
+        <source media="(max-width: 500px)" srcset="carrolado_300.jpg" type="image/jpg">
+        <source media="(max-width: 900px)" srcset="carrolado_650.jpg" type="image/jpg">
+        <source media="(max-width: 1400px)" srcset="carrolado_1200.jpg" type="image/jpg">
+        <img src="carrolado_full.jpg" alt="Carro de Lado">
+    </picture>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="musicHoldTheLine.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>

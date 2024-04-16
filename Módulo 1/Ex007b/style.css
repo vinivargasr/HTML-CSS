@@ -1,0 +1,43 @@
+@charset "UFT-8";
+body{
+    background-image: linear-gradient(to top,#054A29,#4DAA57);
+    color: #800E13;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+    width: 500px;
+}
+
+div {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+    border-radius: 20px;
+    width: 500px;
+    margin-top: 0.5cm;
+}
+
+h1 {
+    color: #800E13;
+    text-shadow: 1px 1px 2px #740d123f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    mix-blend-mode: difference;
+    color: #fff;
+}
+
+img {
+    width: 20px;
+    height: 25px;
+}

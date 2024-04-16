@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyVsf</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            transition: background-color 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <h1>Spotify Vsf</h1>
+    <h2>Escolha uma música!!<small> (para ver sem anúncios)</small></h2>
+    <ul>
+        <li><h3>Hold The Line <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicHoldTheLine.mp3" type="audio/mp3">
+        </audio></h3>
+        <li><h3>Feet Don't Fail Me Now <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicFeetDontFailMeNow.mp3" type="audio/mp3">
+        </audio></h3>
+        <li><h3>Big in Japan <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicBiginJapan.mp3" type="audio/mp3">
+        </audio></h3>
+        <li><h3>Livin On A Prayer <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicLivinOnAPrayer.mp3" type="audio/mp3">
+        </audio></h3>
+        <li><h3>Jealous <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicJealous.mp3" type="audio/mp3">
+        </audio></h3>
+        <li><h3>Sunglasses At Night <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicSunglassesAtNight.mp3" type="audio/mp3">
+        </audio></h3>
+        <li><h3>Bad City <br>
+            <audio preload="metadata" controls autoplay loop>
+            <source src="musicBadCity.mp3" type="audio/mp3">
+        </audio></h3>
+    </ul>
+    </main>
+        <script>
+            function changeBackgroundColor() {
+              var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+              var randomColor = colors[Math.floor(Math.random() * colors.length)];
+              document.body.style.backgroundColor = randomColor;
+            }
+            setInterval(changeBackgroundColor, 1000);
+          </script>
+</body>
+</html>
