@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 700px;
+            box-shadow: 0px 0px 1px black;
+            position: relative;
+        }
+
+        tbody > tr > td:hover {
+            transition: .2s;
+            background-color: white;
+            transform: scale(1.3);
+            box-shadow: inset 0px 0px 0px 1px rgb(0, 0, 0);
+        }
+
+        thead, tfoot {
+            background-color: rgb(87, 86, 86);
+            color: white;
+            font-weight: bold;
+            height: 80px;
+            text-align: center;
+        }
+
+        tfoot {
+            height: 60px;
+        }
+
+        tbody {
+            height: 600px;
+            
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+
+        td.num {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        td.dig {
+            padding-left: 10px;
+        }
+
+        td.posi {
+            text-align: center;
+        }
+        
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(87, 86, 86);
+        }
+
+        caption {
+            font-size: 1.3em;
+            padding: 10px;
+            background-color: lightcyan;
+            border: 1px solid rgba(70, 69, 69, 0.445);
+            box-shadow: 0px 0px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Posição</th>
+                <th scope="col">Unidade federativa</th>
+                <th scope="col">População<br><small>(Censo de 2022)</small></th>
+                <th scope="col">% da pop. total</th>
+                <th scope="col">País comparável</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td class="posi">1</td>
+                    <td class="dig">São Paulo</td>
+                    <td class="num">44 411 238</td>
+                    <td class="num">21,8%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/22px-Flag_of_Argentina.svg.png" alt="Argentina"> &nbsp;Argentina</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">2</td>
+                    <td class="dig">Minas Gerais</td>
+                    <td class="num">20 538 718</td>
+                    <td class="num">10,1%</td>
+                    <td class="dig"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/22px-Flag_of_Burkina_Faso.svg.png" alt="Burquina Fasso">&nbsp;Burquina Fasso</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">3</td>
+                    <td class="dig">Rio de Janeiro</td>
+                    <td class="num">16 054 524</td>
+                    <td class="num">7,9%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/22px-Flag_of_Cambodia.svg.png" alt="Camboja">&nbsp;Camboja</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">4</td>
+                    <td class="dig">Bahia</td>
+                    <td class="num">14 141 626</td>
+                    <td class="num">6,9%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/22px-Flag_of_Zimbabwe.svg.png" alt="Zimbabwe">&nbsp;Zimbabwe</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">5</td>
+                    <td class="dig">Paraná</td>
+                    <td class="num">11 444 380</td>
+                    <td class="num">5,6%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/22px-Flag_of_Tunisia.svg.png" alt="Tunísia">&nbsp;Tunísia</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">6</td>
+                    <td class="dig">Rio Grande do Sul</td>
+                    <td class="num">10 882 965</td>
+                    <td class="num">5,3%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/22px-Flag_of_Portugal.svg.png" alt="Portugal">&nbsp;Portugal</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">7</td>
+                    <td class="dig">Pernambuco</td>
+                    <td class="num">10 882 965</td>
+                    <td class="num">4,4%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/22px-Flag_of_Austria.svg.png" alt="Áustria">&nbsp;Áustria</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">8</td>
+                    <td class="dig">Ceará</td>
+                    <td class="num">9 058 931</td>
+                    <td class="num">4,3%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/20px-Flag_of_Papua_New_Guinea.svg.png" alt="Papua-Nova Guiné">&nbsp;Papua-Nova Guiné</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">9</td>
+                    <td class="dig">Pará</td>
+                    <td class="num">8 121 025</td>
+                    <td class="num">4,1%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/16px-Flag_of_Switzerland.svg.png" alt="Suíça">&nbsp;Suíça</td>
+                </tr>
+
+                <tr>
+                    <td class="posi">10</td>
+                    <td class="dig">Santa Catarina</td>
+                    <td class="num">7 610 361</td>
+                    <td class="num">3,7%</td>
+                    <td class="dig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/22px-Flag_of_Laos.svg.png" alt="Laos">&nbsp;Laos</td>
+                </tr>
+
+            </tbody>
+        </thead>
+
+        <tfoot>
+            <th scope="row" colspan="3">População total</th>
+            <td class="num" colspan="2">210 000 000</td>
+        </tfoot>
+    </table>
+    
+    <p style="font-size: 40px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat praesentium nulla vel, soluta perferendis sed consectetur ipsa necessitatibus libero culpa harum, incidunt corrupti ab, rem placeat accusamus dolores officiis. Suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aliquam possimus nihil, amet corporis commodi debitis soluta nostrum impedit cumque adipisci quia facere exercitationem inventore veniam. Rerum recusandae totam optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia et voluptates sequi non, veniam quisquam illum harum omnis, ad dolores magnam minus at? Fuga, reprehenderit! Omnis ratione corrupti eos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit magni quis aliquid temporibus dolores, provident iste id et. Magni laboriosam qui inventore error dicta iste fuga reiciendis deserunt impedit quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem perferendis labore quas consequatur magni distinctio impedit officiis id, ipsa ratione ad assumenda veniam, excepturi quaerat eveniet quibusdam minima nemo.</p>
+</body>
+</html>
