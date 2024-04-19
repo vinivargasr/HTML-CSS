@@ -28,11 +28,22 @@
             font-weight: bold;
         }
 
+        .grupo {
+            background-color: rgb(166, 166, 243);
+        }
+
     </style>
 </head>
 <body>
     <table>
         <caption>Filmes favoritos</caption>
+
+        <colgroup>
+            <col class="grupo">
+            <col class="">
+            <col class="grupo" span="3">
+        </colgroup>
+        
         <tr>
             <th scope="colgroup">Grupo</th>
             <th scope="col">Nomes</th>
