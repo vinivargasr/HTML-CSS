@@ -50,6 +50,14 @@ main {
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition-duration: 0.5s;
+    border: 2px solid transparent;
+}
+
+.botao:hover {
+    transform: scale(1.2);
+    border: 2px solid rgba(255, 255, 255, 0.644);
+    transform: translate(5px, -2px);
 }
 
 iframe {
