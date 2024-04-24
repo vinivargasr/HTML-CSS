@@ -7,6 +7,20 @@
 </head>
 <body>
     <h1>Teste de Formulário</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corporis laboriosam esse harum reiciendis tempore blanditiis eveniet adipisci enim beatae repellendus, accusantium amet quia voluptatem? Reprehenderit, similique. Non, doloremque praesentium.</p>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusuario">Usuário:</label>
+            <input type="text" name="usuario" id="iusuario" required minlength="5" maxlength="30" size="15" placeholder="Nome do Usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" size="15" placeholder="Minímo 8 Letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
 </body>
 </html>
