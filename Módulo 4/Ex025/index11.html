@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+        }
+
+        #enviarlimpar > input {
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 1px solid black;
+        }
+
+        #botaoenviar {
+            background-color: rgb(189, 235, 168);
+        }
+
+        #botaoenviar:hover {
+            background-color: rgb(157, 230, 123);
+        }
+
+        #botaolimpar {
+            background-color:rgba(240, 170, 170, 0.808);
+        }
+
+        #botaolimpar:hover {
+            background-color: rgba(230, 123, 123, 0.808);
+        }
+
+        #dadospessoais {
+            margin: 10px;
+            height: 80px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            columns: 2;
+        }
+
+        #legendadados {
+            text-align: left;
+        }
+
+        #formacao {
+            margin: 10px;
+            height: 80px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            columns: 2;
+        }
+
+        #legendaformacao {
+            text-align: left;
+        }
+
+        #dadosp {
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="cadastro.php" method="post">
+
+        <fieldset id="dadosp">
+            <legend id="legendadados">Dados pessoais</legend>
+            <div id="dadospessoais">
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" placeholder="Digite seu nome" size="20" required>
+                                
+                <label for="isob">Sobrenome:</label>
+                <input type="text" name="sob" id="isob" placeholder="Digite seu sobrenome" size="20" required>
+
+                <label for="iidade">Idade:</label>
+                <input type="number" name="idade" id="iidade" min="0" max="120" placeholder="__ anos">
+
+                <br><label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" placeholder="Seu email" size="30" required>
+
+                <br><label for="ifone">Telefone:</label>
+                <input type="tel" name="fone" id="ifone" placeholder="(__)_____-____" pattern="[0-9]{2,3}-[0-9]{4,5}-[0-9]{4}" size="12" maxlength="14" required>
+
+                
+
+                <br><label for="isexo">Sexo:</label>
+                <input type="radio" name="sexo" id="imas" value="M"> Masculino
+                <input type="radio" name="sexo" id="ifem" value="F"> Feminino
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend id="legendaformacao">Formação</legend>
+            <div id="formacao">
+                <label for="iescola">Nível de Escolaridade:</label>
+                <!-- CONTINUAR DAQUI USANDO INPUT PARA ESCOLHER O NÍVEL DE ESCOLARIDADE-->
+
+            </div>
+        </fieldset>
+
+        <div id="enviarlimpar">
+            <input id="botaolimpar" type="reset" value="Limpar">
+            <input id="botaoenviar" type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
