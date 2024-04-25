@@ -8,6 +8,7 @@
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             text-align: center;
+            min-width: max-content;
         }
 
         #enviarlimpar > input {
@@ -36,6 +37,7 @@
         }
 
         #dadospessoais {
+            line-height: 25px;
             margin: 10px;
             height: 80px;
             margin-top: 20px;
@@ -50,14 +52,42 @@
 
         #formacao {
             margin: 10px;
-            height: 80px;
+            height: 50px;
             margin-top: 20px;
             margin-bottom: 20px;
             text-align: left;
-            columns: 2;
+            line-height: 25px;
         }
 
         #legendaformacao {
+            text-align: left;
+        }
+
+
+        #documentacao {
+            margin: 10px;
+            height: 170px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            columns: 1;
+            line-height: 30px;
+        }
+
+        #legendadoc {
+            text-align: left;
+        }
+
+        #endereco {
+            margin: 10px;
+            height: 170px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 30px;
+        }
+
+        #legendaend {
             text-align: left;
         }
 
@@ -65,22 +95,39 @@
             margin-bottom: 30px;
         }
 
+        #formap {
+            margin-bottom: 30px;
+        }
+
+        #docp {
+            width: 100%;
+            margin-right: 5px;
+        }
+
+        #endp {
+            width: 100%;
+            margin-left: 5px;
+        }
+
+        #container {
+            display: flex;
+        }
     </style>
 </head>
 <body>
-    <h1>Formulário</h1>
+    <h1>FORMULÁRIO</h1>
     <form action="cadastro.php" method="post">
 
         <fieldset id="dadosp">
             <legend id="legendadados">Dados pessoais</legend>
             <div id="dadospessoais">
                 <label for="inome">Nome:</label>
-                <input type="text" name="nome" id="inome" placeholder="Digite seu nome" size="20" required>
+                <input type="text" name="nome" id="inome" placeholder="Digite seu nome" size="20" required><br>
                                 
                 <label for="isob">Sobrenome:</label>
                 <input type="text" name="sob" id="isob" placeholder="Digite seu sobrenome" size="20" required>
 
-                <label for="iidade">Idade:</label>
+                <br><label for="iidade">Idade:</label>
                 <input type="number" name="idade" id="iidade" min="0" max="120" placeholder="__ anos">
 
                 <br><label for="iemail">Email:</label>
@@ -97,21 +144,125 @@
             </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset id="formap">
             <legend id="legendaformacao">Formação</legend>
             <div id="formacao">
                 <label for="iescola">Nível de Escolaridade:</label>
                 <select name="escola" id="iescola">
+                    <option disabled>--- Escolha ---</option>
                     <option>Ensino Fundamental Incompleto</option>
                     <option>Ensino Fundamental Completo</option>
                     <option>Ensino Médio Imcompleto</option>
                     <option>Ensino Médio Completo</option>
-                    <option>Curso Técnico</option>
+                    <option>Ensino Superior Imcompleto</option>
+                    <option>Ensino Superior Completo</option>
+                    <option>Doutorado</option>
+                    <option>Pós-Doutorado</option>
                 </select>
-                <!-- CONTINUAR DAQUI USANDO INPUT PARA ESCOLHER O NÍVEL DE ESCOLARIDADE-->
+               
+                <br><label for="icurso">Curso de Graduação</label>
+                <select name="curso" id="icurso">
+                    <option>Nenhum</option>
+                    <option>Administração</option>
+                    <option>Arquitetura e Urbanismo</option>
+                    <option>Análise e Desenvolvimento de Sistemas</option>
+                    <option>Ciências Contábeis</option>
+                    <option>Ciência da Computação</option>
+                    <option>Direito</option>
+                    <option>Educação Física</option>
+                    <option>Enfermagem</option>
+                    <option>Física</option>
+                    <option>Gastronomia</option>
+                    <option>Manutenção Industrial</option>
+                    <option>Matemática</option>
+                    <option>Nutrição</option>
+                    <option>Pedagogia</option>
+                    <option>Processos Gerenciais</option>
+                    <option>Sistemas para Internet</option>
+                    <option>Zootecnia</option>
+                    <option>Outros</option>
+                </select>
 
             </div>
         </fieldset>
+
+        <div id="container">
+
+            <fieldset id="docp">
+                <legend id="legendadoc">Documentação</legend>
+                <div id="documentacao">
+                    <label for="icpf">CPF:</label>
+                    <input type="text" name="cpf" id="icpf" placeholder="___.___.___-__" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" minlength="14" maxlength="14" required>
+    
+                    <br><label for="irg">RG:</label>
+                    <input type="text" name="rg" id="irg" placeholder="__.___.___-_" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}" minlength="12"  maxlength="12" required>
+
+                    <br><label for="iorg">Órgão Emissor:</label>
+                    <select name="org" id="iorg" required>
+                        <option disabled>Nenhum</option>
+                        <option>IIPR</option>
+                    </select>
+
+                    <label for="iuf">UF:</label>
+                    <select name="uf" id="iuf" required>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+
+                    <br><label for="idatadoc">Data de Emissão:</label>
+                    <input type="date" name="datadoc" id="idatadoc" required>
+
+                    <br><label for="ipis">NIT/PIS</label>
+                    <input type="text" name="pis" id="ipis" placeholder="___._____.__-_" pattern="\d{3}\.\d{5}\.\d{2}-\d{1}" minlength="14" maxlength="14" required>
+                </div>
+                
+            </fieldset>
+
+            <fieldset id="endp">
+                <legend id="legendaend">Endereço Residencial</legend>
+                <div id="endereco">
+                    <label for="icep">CEP:</label>
+                    <input type="text" name="cep" id="icep" placeholder="_____-___" pattern="\d{5}\-\d{3}" minlength="9" maxlength="9" required>
+
+                    <br><label for="irua">Rua:</label>
+                    <input type="text" name="rua" id="irua" placeholder="Ex: Francisco Derosso" minlength="5" max="40" required>
+
+                    <br><label for="inumcasa">N°</label>
+                    <input type="number" name="numcasa" id="inumcasa" placeholder="Ex: 734" min="1" max="3000" required>
+
+                    <br><label for="icity">Cidade:</label>
+                    <input type="text" name="city" id="icity" placeholder="Ex: Curitiba"
+                    minlength="1" maxlength="32" required>
+
+                    <br><label for="ibairro">Bairro:</label>
+                    <input type="text" name="bairro" id="ibairro" placeholder="Ex: Xaxim" minlength="1" max="32" required>
+                </div>
+            </fieldset>
+        </div>
 
         <div id="enviarlimpar">
             <input id="botaolimpar" type="reset" value="Limpar">
