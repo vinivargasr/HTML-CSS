@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@media print {
+    body {
+        background-image: url(../imagens/back-print.jpg);
+        font-family: 'Courier New', Courier, monospace;
+        
+    }
+
+    main {
+        border: 1px solid black;
+    }
+
+    main h1 {
+        color: black;
+        text-shadow: none;
+    }
+
+    #cell {
+        display: none;
+    }
+
+    #imp {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    #cell { 
+        display: none;
+    }
+    #tablet { 
+        display: block;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    #cell {
+        display: none;
+    }
+
+    #pc {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    #cell {
+        display: none;
+    }
+
+    #tv {
+        display: block;
+    }
+}
