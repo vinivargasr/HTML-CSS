@@ -18,16 +18,18 @@
         <div id="img66">
             <h1>Login</h1>
             <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-            <fieldset id="bloconome">
-                <label for="inome"><span class="material-symbols-outlined">person</span></label>
-                <input type="text" name="nome" id="inome" size="10" autocomplete="name" placeholder="Seu usuário" maxlength="32" minlength="3" required>
-            </fieldset>
-            <fieldset id="blocosenha">
-                <label for="isenha"><span class="material-symbols-outlined">vpn_key</span></label>
-                <input type="password" name="senha" id="isenha" size="10" autocomplete="current-password" placeholder="Sua senha" minlength="8" maxlength="32" required>
-            </fieldset>
-            <input type="submit" id="enviar" value="Enviar">
-            <input type="button" id="esqueci" value="Esqueci minha senha ✉︎">
+            <form action="cadastro.php" method="post">
+                <fieldset id="bloconome">
+                    <label for="inome"><span class="material-symbols-outlined">person</span></label>
+                    <input type="text" name="nome" id="inome" size="10" autocomplete="name" placeholder="Seu usuário" maxlength="32" minlength="3" required>
+                </fieldset>
+                <fieldset id="blocosenha">
+                    <label for="isenha"><span class="material-symbols-outlined">vpn_key</span></label>
+                    <input type="password" name="senha" id="isenha" size="10" autocomplete="current-password" placeholder="Sua senha" minlength="8" maxlength="32" required>
+                </fieldset>
+                <input type="submit" id="enviar" value="Enviar">
+                <input type="button" id="esqueci" value="Esqueci minha senha ✉︎">
+            </form>
         </div> 
     </div>
     </main>
