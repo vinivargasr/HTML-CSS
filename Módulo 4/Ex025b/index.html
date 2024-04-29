@@ -43,7 +43,7 @@
         
         main {
             background-color: white;
-            min-width: 300px;
+            width: 85vw;
             max-width: 600px;
             margin: auto;
             padding: 10px 20px;
@@ -105,7 +105,7 @@
 
     </style>
 </head>
-<body>
+<body onresize="mudouTamanho">
     <header>
         <h1>Meu Site</h1>
         <span id="menu" onclick="clickMenu()" class="material-symbols-outlined"> menu</span>
@@ -125,6 +125,14 @@
     </main>
 
     <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 400) {
+                opcoes.style.display = 'block'
+            }  else {
+                opcoes.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (opcoes.style.display == 'block') {
                 opcoes.style.display = 'none'
