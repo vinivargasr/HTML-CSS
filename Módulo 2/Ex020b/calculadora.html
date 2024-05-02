@@ -10,7 +10,7 @@
     <main>
         &nbsp;
         <div id="resultado">
-
+            <div id="titulores"></div>
         </div>
     <div id="numeros">
     <ul>
@@ -47,7 +47,7 @@
         <li><div class="num">
             <p>3</p>
         </div>
-        <li><div class="num">
+        <li><div class="num" id="limpar">
             <p>←</p>
         </div>  
     </ul>
@@ -55,24 +55,75 @@
     
     <div id="operacoes">
         <ul>
-            <li><div class="opr">
+            <li><div class="opr" id="divisao">
                 <p>÷</p>
             </div>
-            <li><div class="opr" style="font-size: small;">
+            <li><div class="opr" style="font-size: small;" id="vezes">
                 <p>x</p>
             </div>
-            <li><div class="opr">
+            <li><div class="opr" id="subtracao">
                 <p>-</p>
             </div>
-            <li><div class="opr">
+            <li><div class="opr" id="soma">
                 <p>+</p>
             </div>
-            <li><div class="opr">
+            <li><div class="opr" id="igual">
                 <p>=</p>
             </div>
         </ul>
     </div>
 
     </main>
+    <script>
+        var soma = window.document.getElementById('soma')
+        
+        soma.addEventListener('click', clicarsoma)
+
+        function clicarsoma() {
+            titulores.innerText = '+'
+        }
+
+        // SOOMMMAAAA ^^^^^^
+
+        var sub = window.document.getElementById('subtracao')
+        
+        sub.addEventListener('click', clicarsub)
+
+        function clicarsub() {
+            titulores.innerText = '-'
+        }
+
+        // SSUUBBTRAÇÃOOO ^^^^
+
+        var vzs = window.document.getElementById('vezes')
+        
+        vzs.addEventListener('click', clicarvzs)
+
+        function clicarvzs() {
+            titulores.innerText = 'x'
+        }
+
+        // VVVEEEEZZZES ^^^^^^
+
+        var divisao = window.document.getElementById('divisao')
+        
+        divisao.addEventListener('click', clicardiv)
+
+        function clicardiv() {
+            titulores.innerText = '÷'
+        }
+
+        // DDIIIVVVIIISSSÃO ^^^^^^
+
+        var limp = window.document.getElementById('limpar')
+        
+        limp.addEventListener('click', clicarlimp)
+
+        function clicarlimp() {
+            titulores.innerText = ''
+        }
+
+        // LIMPANDO ^^^^
+    </script>
 </body>
 </html>

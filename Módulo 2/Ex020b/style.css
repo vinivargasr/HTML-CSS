@@ -86,3 +86,9 @@ main {
 .opr:hover {
     background-color:  rgb(185, 178, 178);
 }
+
+#titulores {
+    padding: 20px;
+    font-size: 50px;
+    color: black;
+}
